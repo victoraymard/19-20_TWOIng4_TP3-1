@@ -7,7 +7,7 @@ class Profile extends React.Component{
                 <img src={"./img/profile_picture.png"}/>
 
                 <article>
-                    <div >
+                    <div id={"nameAndFirstName"} >
                         <p>prénom</p>
                         <p>nom</p>
                     </div>
@@ -23,5 +23,7 @@ class Profile extends React.Component{
             </div>
         );
     }
+
+
 }
 export default Profile;
