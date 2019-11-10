@@ -7,6 +7,10 @@ import Publication from "./Components/Publication";
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
+/*    import des photos    */
+import profile_picture_0 from './img/profile_picture_0.jpg'
+import profile_picture_1 from './img/profile_picture_1.jpg'
+import profile_picture_2 from './img/profile_picture_2.PNG'
 
 
 
@@ -55,7 +59,7 @@ function App() {
             nom: 'Dupont',
             prenom: 'Jeanne',
             date_de_naissance: '02.03.1997',
-            photo_de_profile: 'indiquer le chemin',
+            photo_de_profile: profile_picture_0,
             publication:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in neque lacus. Nulla porta ' +
                         'nunc at aliquam tristique. In ut varius odio. Aenean tellus dui, aliquet et leo et,' +
                         ' venenatis varius erat. Jeanne',
@@ -65,7 +69,7 @@ function App() {
             nom: 'Martin',
             prenom: 'Martine',
             date_de_naissance: '03.10.1902',
-            photo_de_profile: 'indiquer le chemin',
+            photo_de_profile: profile_picture_1,
             publication:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in neque lacus. Nulla porta ' +
                 'nunc at aliquam tristique. In ut varius odio. Aenean tellus dui, aliquet et leo et,' +
                 ' venenatis varius erat. Martine',
@@ -75,7 +79,7 @@ function App() {
             nom: 'Palehun',
             prenom: 'Claude',
             date_de_naissance: '02.03.1997',
-            photo_de_profile: 'indiquer le chemin',
+            photo_de_profile: profile_picture_2,
             publication:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in neque lacus. Nulla porta ' +
                 'nunc at aliquam tristique. In ut varius odio. Aenean tellus dui, aliquet et leo et,' +
                 ' venenatis varius erat. Claude',
@@ -113,7 +117,7 @@ function App() {
     /*------------------------ function component ----------------------------------*/
 
   function FUser({fUser_firstName = 'Prénom', fUser_familyName = 'nom',fUser_birthdate ='date de naissance',
-                     fUser_profilePicture='./img/profile_picture.PNG' }){
+                     fUser_profilePicture='./img/profile_picture.png' }){
       return <div>
           <FProfile
               firstName={fUser_firstName}
@@ -127,9 +131,9 @@ function App() {
 
   }
 
-    function FProfile({firstName = 'Prénom', familyName = 'nom', birthdate ='date de naissance', profilePicture='./img/profile_picture.PNG' }) {
+    function FProfile({firstName = 'Prénom', familyName = 'nom', birthdate ='date de naissance', profilePicture='./img/profile_picture_0.PNG' }) {
         return <div id={"profile"}>
-            <img src={profilePicture}/>
+            <img src={ (profilePicture)}/>
 
             <article>
                 <div id={"nameAndFirstName"} >
@@ -156,10 +160,10 @@ function App() {
                     </article>
 
                     <aside>
-                        <div>
-                            <img src={"ghj"}/>
+                        <button id={"cSuper"} onClick={() => console.log(`Bonjour !`)}>
+                            <img id={"thumb"} src={require("./img/thumb.png")}/>
                             <p>C'est super !</p>
-                        </div>
+                        </button>
                     </aside>
                 </div>
     }

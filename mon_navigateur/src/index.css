@@ -72,3 +72,16 @@ header a {
   background-color: aqua;
   width:100%;
 }
+
+
+
+/*------------------ bouton c'est super ------------------*/
+#thumb {
+    width: 30px;
+}
+
+#cSuper {
+    border: solid;
+    display: flex;
+    flex-direction: row;
+}
